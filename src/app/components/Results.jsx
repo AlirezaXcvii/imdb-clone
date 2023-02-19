@@ -1,14 +1,12 @@
 import React from 'react'
+import Card from './Card'
 
 export default function Results(props) {
   return (
-    <div className='flex flex-wrap'> 
+    <div className='sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 max-w-6xl mx-auto my-4'> 
         {
             props.results.map(movie => (
-                <div className=''>
-                    <img className='max-w-[200px]' src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} />
-                    <div>{movie.title}</div>
-                </div>
+              <Card key={movie.id} movie={movie} />
             ))
         }
     </div>
