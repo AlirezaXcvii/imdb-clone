@@ -2,6 +2,7 @@ import './globals.css'
 import Header from './components/Header'
 import Provider from './Provider'
 import Navbar from './components/Navbar'
+import Searchbar from './components/Searchbar'
 
 export default function RootLayout({ children }) {
   return (
@@ -15,6 +16,7 @@ export default function RootLayout({ children }) {
         <Provider>
           <Header />
           <Navbar />
+          <Searchbar />
           {children}
         </Provider>
       </body>
