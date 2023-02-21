@@ -4,7 +4,7 @@ import Results from '@/app/components/Results'
 const API_KEY = process.env.API_KEY
 
 export default async function page({params}) {
-  const res = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${params.search}`)
+  const res = await fetch(`https://api.themoviedb.org/3/search/multi?api_key=${API_KEY}&query=${params.search}&language=en-US`)
 
   if(!res.ok){
     throw new Error('error fetching data')
@@ -12,7 +12,6 @@ export default async function page({params}) {
 
   const data = await res.json()
   const results = data.results
-  console.log(results)
 
   return (
 
