@@ -18,7 +18,6 @@ export default async function page({params}) {
     <div>
       {results && results.length == 0 && <h2 className='text-center mt-4'>No results found 🖕</h2>}
       {results && <Results results={results}/>}
-      
     </div>
   )
 }
